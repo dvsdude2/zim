@@ -1,0 +1,58 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-07-02T07:34:04-06:00
+
+====== vimwiki ======
+Created Friday 02 July 2021
+
+== tabs ==
+next tab        ctrl+page up/down
+next tab        gt            
+previous tab    gT            
+3gt will jump to the third tab. 
+
+== Key bindings ==
+**Normal mode**
+Basic key bindings............<Leader> = " / "
+to find leader key run .......:echo mapleader
+Open wiki index file..........<Leader>ww 
+Open wiki index in new tab.....<Leader>wt  
+Select and open wiki index file.....<Leader>ws   
+Delete wiki file you are in.....<Leader>wd   
+Rename wiki file you are in.....<Leader>wr   
+Goto or create new wiki page.....<Leader>wn  
+opens diary.....................<leader>wi  
+Follow/Create wiki link.........<Enter>           
+Split and create wiki link......<Shift-Enter>  
+V split and create wiki link.....<Ctrl-Enter>  
+Go back (previous) wiki..........<Backspace>  
+Find next wiki link..............<Tab> 
+previous wiki link...............<Shift-Tab>  
+Advanced key bindings
+Refer to the complete documentation at **:h vimwiki-mappings** to see many more bindings.
+
+== Commands ==
+**:Vimwiki2HTML** -- Convert current wiki link to HTML.
+**:VimwikiAll2HTML** -- Convert all your wiki links to HTML.
+**:help vimwiki-commands** -- List all commands.
+**:help vimwiki** -- General vimwiki help docs.
+
+== **Changing Wiki Syntax** ==
+VimWiki currently ships with 3 syntaxes: VimWiki (default), Markdown (markdown), and MediaWiki (media).
+If you would prefer to use either Markdown or MediaWiki syntaxes, set the following option in your .vimrc:
+
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+					  \ 'syntax': 'markdown', 'ext': '.md'}]
+					
+
+== start Vimwiki directly from shell ==
+//**$ vim -c VimwikiIndex**//
+Opening the file of a wikipage also does the trick, 
+that way you can open it with another than your main page. Example:
+//**$ alias importantpage='vim vimwiki/importantpage.wiki'**//
+//**$ importantpage**//					
+
+
+
+
+

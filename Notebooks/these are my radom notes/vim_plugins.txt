@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-07-06T08:35:54-06:00
+
+====== vim plugins ======
+Created Tuesday 06 July 2021
+
+=== plugins ===
+Install Plugins by <git clone> in bundles folder then  
+Launch vim and run :source % 
+then run           :__P__lugin__I__nstall
+then run           :__P__lugin__U__pdate
+
+
+To install from command line  "": vim +PluginInstall +qall""
+
+== to uninstall plugins ==
+ delete the line " Plugin XXXX" and then ":PluginUpdate" in vim.
+Make sure you restart vim or **:source ~/.vimrc** after deleting the plugin but before running :PluginClean
+:PluginClean" will do the clean task, without manually deleting the plugin directory
+* delete line in .vim
+* "run :  PluginUpdate"
+* restart or `:source [[~/.vimrc`]]
+* "run :  PluginClean"
+
+" Brief help
+   " :PluginList       - lists configured plugins
+   " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+   " :PluginSearch foo - searches for foo; append `!` to refresh local cache
+   " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+   "
+   " see :h vundle for more details or wiki for FAQ
+

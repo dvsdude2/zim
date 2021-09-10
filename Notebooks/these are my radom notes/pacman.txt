@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-09-01T10:28:26-06:00
+
+====== pacman ======
+Created Wednesday 01 September 2021
+
+== Installing package(s) ==
+Installing a package with pacman is really easy. Just run the following command:
+
+sudo pacman -S <package_name_1>
+
+In cases, you may just want to download the package. Pacman can be used to perform the action for you. Just use the “-Sw” flag.
+
+sudo pacman -Sw <package_name>
+
+Pacman will download the package as <package_name>.tar.xz file and store it at “/var/cache/pacman/pkg” directory. In fact, all the Arch Linux packages are available in the .TAR.XZ format. Don’t worry; pacman can directly install a .TAR.XZ file provided that it’s a legit Arch Linux package file.
+
+sudo pacman -U <package_name>.tar.xz
+
+== Searching ==
+If you’re confused with the package name, ask pacman to search it for you!
+
+pacman -Ss <search_term>
+or pacsearch <search term>
+
+== Uninstallation ==
+With pacman, uninstalling a package is more secure. Just run the following command:
+
+sudo pacman -R <package_name>

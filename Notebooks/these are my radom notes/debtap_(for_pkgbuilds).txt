@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-08-20T23:04:25-06:00
+
+====== debtap (for pkgbuilds) ======
+Created Friday 20 August 2021
+
+Q: How do I use debtap?
+
+A: The syntax is quite simple actually: debtap [options] package_filename For example: debtap world-of-goo-demo_1.0_i386.deb
+
+Any recommendations or questions for debtap are welcomed!
+
+Available options:
+-h  --help        Prints help
+-u  --update      Update debtap database
+-q  --quiet       Bypass all questions, except for editing metadata file(s)
+-Q  --Quiet       Bypass all questions (not recommended)
+-s  --pseudo      Create a pseudo-64-bit package from a 32-bit .deb package
+-w  --wipeout     Wipeout versions from all dependencies, conflicts etc.
+-p  --pkgbuild    Additionally generate a PKGBUILD file
+-P  --Pkgbuild    Generate a PKGBUILD file only
+-v  --version     Print version

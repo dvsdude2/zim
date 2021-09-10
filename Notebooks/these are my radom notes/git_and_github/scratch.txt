@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-08-27T03:08:10-06:00
+
+====== scratch ======
+Created Friday 27 August 2021
+
+usage: git remote add [<options>] <name> <url>
+
+	-f, --fetch           fetch the remote branches
+	--tags                import all tags and associated objects when fetching
+						  or do not fetch any tag at all (--no-tags)
+	-t, --track <branch>  branch(es) to track
+	-m, --master <branch>
+						  master branch
+	--mirror[=(push|fetch)]
+						  set up remote as a mirror to push to or fetch from
+

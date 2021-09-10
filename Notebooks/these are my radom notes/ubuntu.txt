@@ -1,0 +1,50 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-04-27T13:56:06-06:00
+
+====== ubuntu ======
+Created Tuesday 27 April 2021
+
+alt+'             =  switch window of same apps
+alt+tab           =  cycle apps
+super+s           =  switch work spaces
+ctrl+alt+#key     =  snap window
+ctrl+alt+arrkys   =  workplace next
+curser L-R        =  moves window focus
+curser U-D        =  ent/ex spread or select window
+
+
+==== Check for updates and refresh your system ====
+
+
+window (app switch)    = alt+tab
+window (switch) in WS  = super+w
+window snap tile       = ctrl+alt+#key
+window resize max      = ctrl+super+arrkys
+window resize mouse    = alt+middle button drag
+window move mouse      = alt+left button drag
+window move workspace  = shift+ctrl+alt+arrkys
+window close           = shift+ctrl+q
+window close           = alt+F4 / alt+q
+workspace (switch)     = super+s
+workspace next         = ctrl+alt+arrkys
+
+'''
+ - sudo apt update && sudo apt upgrade
+
+pling themes
+Manual Installation Is Easy:
+
+For themes: 1) Extract the "tar.xz" file into your "~/.themes/" folder - to install for current user only 
+- or into the "/usr/share/themes/" folder - for the theme to be applied globally. 
+            2) Use the GNOME Tweak Tool or an equivalent app to enable it for your desktop.
+
+If installing manually, make sure to install the dependency: "Murrine theme engine" if you do not already have it; 
+and update your GTK+packages if you have not.
+
+For icons: 1) Extract the "tar.xz" file into your "~/.icons/" folder - to install for current user only 
+- or into the "/usr/share/icons/" folder - for the icons and folders to be applied globally. 
+           2) Use the GNOME Tweak Tool or an equivalent app to enable them for your desktop.
+
+Logging out and then logging back in may be necessary on some operating systems to fully implement themes and icons.
+'''

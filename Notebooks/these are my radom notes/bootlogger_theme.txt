@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-04-02T20:19:05-06:00
+
+====== **bootlogger themes** ======
+
+==== bootlogger theme ====
+
+- git clone https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes
+- cd Top-5-Bootloader-Themes
+- sudo ./install.sh

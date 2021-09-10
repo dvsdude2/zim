@@ -1,0 +1,60 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-08-17T07:46:52-06:00
+
+====== scrachpad ======
+Created Tuesday 17 August 2021
+
+[[+xterm_clipboard]]
+__git remote add upstream __https://github.com/dvsdude2/my.dotconfigs.git
+__git remote add upstream __
+
+https://github.com/dvsdude2/my.dotconfigs.git
+
+
+git pull --rebase https://github.com/dvsdude2/my.dotconfigs.git main
+
+git push --force-with-lease origin main
+
+git checkout main (this put me in main branch)
+
+git reset --hard main
+
+hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint:
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint:
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+
+
+
+== after this has been fixed ==
+Above I assumed that you are only using one branch, main. If you aren't already, I highly recommend that you create a new branch for each feature / bug fix that you work on. Among other benefits, this allows you to start work on another feature / bug fix when you are still waiting for an earlier PR to be merged. If you never commit directly to main, then you can sync without the --rebase or --force-with-lease:
+
+git checkout main
+git pull upstream main
+git push origin main
+To update a feature branch after you have updated main, do:
+
+git checkout myfeature
+git rebase main
+git push --force-with-lease origin myfeature # if you have already pushed
+
+
+[pull]
+	rebase = true
+
+git merge main
+
+
+
+
+
+

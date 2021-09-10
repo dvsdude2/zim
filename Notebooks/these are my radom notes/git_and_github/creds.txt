@@ -1,0 +1,52 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-08-18T03:12:08-06:00
+
+====== creds ======
+Created Wednesday 18 August 2021
+
+==== git personal access token ====
+--------------------
+
+- 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
+
+
+
+
+
+NAME
+git-credential-cache - Helper to temporarily store passwords in memory
+
+SYNOPSIS
+git config credential.helper 'cache [<options>]'
+
+
+XAMPLES
+The point of this helper is to reduce the number of times you must type your username or password. For example:
+
+$ git config credential.helper cache
+$ git push http://example.com/repo.git
+Username: <type your username>
+Password: <type your password>
+
+[work for 5 more minutes]
+$ git push http://example.com/repo.git
+[your credentials are used automatically]
+You can provide options via the credential.helper configuration variable (this example drops the cache time to 5 minutes):
+
+$ git config credential.helper 'cache --timeout=300'
+3. Git's built-in credential cache
+export GCM_CREDENTIAL_STORE=cache
+# or
+git config --global credential.credentialStore cache
+This credential store uses Git's built-in ephemeral in-memory credential cache. This helps you reduce the number of times you have to authenticate but doesn't require storing credentials on persistent storage. It's good for scenarios like Azure Cloud Shell or AWS CloudShell, where you don't want to leave credentials on disk but also don't want to re-authenticate on every Git operation.
+
+By default, git credential-cache stores your credentials for 900 seconds. That, and any other options it accepts, may be altered by setting them in the environment variable GCM_CREDENTIAL_CACHE_OPTIONS or the Git config value credential.cacheOptions. (Using the --socket option is untested and unsupported, but there's no reason it shouldn't work.)
+
+export GCM_CREDENTIAL_CACHE_OPTIONS="--timeout 300"
+# or
+git config --global credential.cacheOptions "--timeout 300"
+
+
+
+

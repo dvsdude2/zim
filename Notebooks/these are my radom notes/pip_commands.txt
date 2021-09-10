@@ -1,0 +1,41 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-03-23T03:00:11-06:00
+
+====== pip commands ======
+Created Tuesday 23 March 2021
+
+Basic usage commands for pip
+The pip command on your system will either be pip3 or just pip. We're going to use pip3 in these examples, but just be aware that you may need to change that command for your own system.
+
+To see the version of pip and verify it's installed on the system:
+$ pip3 -V
+
+To install a __package:__
+$ pip3 install package-name
+
+To remove a package:
+$ pip3 uninstall package-name
+
+To search for a particular package:
+$ pip3 search package-name
+
+To see what packages are installed on your system:
+$ pip3 list
+
+To see information about a particular installed package:
+$ pip3 show package-name
+
+To access the help menu and see a full list of available pip commands:
+
+$ pip3 help
+
+How do you run a setup.py file properly
+http://stackoverflow.com/questions/31373797/ddg#31373814
+If you want to install it then the command is install:
+**__python setup.py install__**
+
+
+If you need to build the package first, use the build command before installing:
+//**python setup.py build**//
+

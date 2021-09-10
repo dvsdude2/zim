@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-06-28T06:33:15-06:00
+
+====== clip menu ======
+Created Monday 28 June 2021
+
+clipmenu
+You may wish to bind a shortcut in your window manager to launch clipmenu.
+
+All args passed to clipmenu are transparently dispatched to dmenu. That is, if you usually call dmenu with args to set colours and other properties, you can invoke clipmenu in exactly the same way to get the same effect, like so:
+
+__clipmenu -i -fn Terminus:size=8 -nb '#002b36' -nf '#839496' -sb '#073642' -sf '#93a1a1'__
+For a full list of environment variables that clipmenud can take, please see clipmenud --help.
+
+== the latest used on ubuntu ==
+keybinding=Alt+c
+clipmenu -i -fn Hack,Bold:size=11 -nb '#002b36' -nf '#839496' -sb '#073642' -sf '#93a1a1'
+
+== on arch ==
+keybinding=Alt+r

@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-04-02T20:24:28-06:00
+
+====== **proton vpn commands** ======
+
+===== proton vpn commands =====
+__how to use proton vpn [web page]__(https://protonvpn.com/support/official-linux-client/)
+
+- protonvpn-cli login [ProtonVPN username]
+- protonvpn-cli connect (or protonvpn-cli c)
+- protonvpn-cli disconnect (or protonvpn-cli d)  To see the full list of connection options, enter: 
+
+- protonvpn-cli c --help 

@@ -1,0 +1,38 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-05-28T02:20:36-06:00
+
+====== AUR pkg install ======
+Created Friday 28 May 2021-
+
+== AUR package build and install instructions ==
+1 **git clone** <copied link>
+2  **cd** <package_name>
+3 **makepkg**  --Make the package. After manually confirming the contents of the files, run **makepkg** as a normal user. Some helpful flags:
+			**-s/ --syncdeps** automatically resolves and installs any dependencies with pacman before building. 
+			**-i/ --install** installs the package if it is built successfully. This lets you skip the next step that is usually done manually.
+			   **-r/ --rmdeps** removes build-time dependencies after the build, as they are no longer needed. 
+			   **-c/ --clean** cleans up temporary build files after the build, as they are no longer needed. 
+
+4 **pacman -U** <package_name-version-architecture.pkg.tar.zst>
+
+== Upgrading packages ==
+In the directory containing the package's PKGBUILD you must first update the files and changes by using the command
+**$ git pull**
+^then follow the previous //build and install instructions//.^ 
+
+====== MAKEPKG usage ======
+To build a package, one must first create a PKGBUILD, or build script, as described in Creating packages. Existing scripts are available from the Arch Build System (ABS) tree or the AUR. Once in possession of a PKGBUILD, change to the directory where it is saved and run the following command to build the package:
+
+**$ makepkg**
+  -If required dependencies are missing, makepkg will issue a warning before failing. To build the package and install needed dependencies, add the flag **-s/--syncdeps:**
+**$ makepkg --syncdeps**
+  -Adding the **-r/--rmdeps** flag causes makepkg to remove the make dependencies later, which are no longer needed. 
+If constantly building packages, consider using Pacman/Tips and tricks#Removing unused packages (orphans) once in a while instead.
+
+Note:
+Once all dependencies are satisfied and the package builds successfully, a package file (pkgname-pkgver.pkg.tar.zst) will be created in the working directory. 
+To install, use **-i/--install (same as pacman -U pkgname-pkgver.pkg.tar.zst):**
+**$ makepkg --install**
+  -To clean up leftover files and folders, such as files extracted to the $srcdir, add the option -c/--clean. This is useful for multiple builds of the same package or updating the package version, while using the same build folder. It prevents obsolete and remnant files from carrying over to the new builds:
+**$ makepkg --clean**

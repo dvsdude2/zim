@@ -1,0 +1,78 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-08-16T18:43:44-06:00
+
+====== git and github ======
+Created Monday 16 August 2021
+
+== How do I create a folder in a GitHub repository? ==
+🌐
+stackoverflow.com
+**TL;DR** Use / in the file name field to create folder(s), e.g. typing folder1/file1 in the file name field will create a folder folder1 and a file file1.
+
+Original answer
+You cannot create an empty folder and then add files to that folder, but rather creation of a folder must happen together with adding of at least a single file. This is because git doesn't track empty folders.
+
+On GitHub you can do it this way:
+
+Go to the folder inside which you want to create another folder
+Click on New file
+On the text field for the file name, first write the folder name you want to create
+Then type /. This creates a folder
+You can add more folders similarly
+Finally, give the new file a name (for example, .gitkeep which is conventionally used to make Git track otherwise empty folders; it is not a Git feature though)
+Finally, click Commit new file.
+
+=== GitHub keeps saying “This branch is X commits ahead, Y commits behind” ===
+
+way to sync your fork with the original repository. In your local repo, after the initial clone do:
+```
+__git remote add upstream https://github.com/upstream/repo.git__
+```
+-Then, whenever you want to sync the changes from upstream, do:
+
+__git pull --rebase upstream master__
+__git push --force-with-lease origin master__
+
+-Now to fix your current issue after the fact.
+
+Add the upstream remote as described above.
+Reset your local branch to match upstream:
+
+__git checkout master__
+__git reset --hard upstream/master__
+
+-If you have created any commits in your fork, you can cherry-pick them onto your updated version of master. If you can't remember or need help finding them, something like
+```
+__git log --oneline master origin/master__
+```
+should show you any commits not in upstream.
+
+-Above I assumed that you are only using one branch, master. If you aren't already, I highly recommend that you create a new branch for each feature / bug fix that you work on. Among other benefits, this allows you to start work on another feature / bug fix when you are still waiting for an earlier PR to be merged. If you never commit directly to master, then you can sync without the --rebase or --force-with-lease:
+
+__git checkout master__
+__git pull upstream master__
+__git push origin master__
+To update a feature branch after you have updated master, do:
+
+git checkout myfeature
+git rebase master
+git push --force-with-lease origin myfeature # if you have already pushed
+
+
+
+ There are now 3 different levels of configuration for default pull behaviour. From most general to most fine grained they are:
+
+1. pull.rebase
+Setting this to true means that git pull is always equivalent to git pull --rebase (unless branch.<branchname>.rebase is explicitly set to false). This can also be set per repository or globally.
+
+2. branch.autosetuprebase
+Setting this to always means that whenever a tracking branch is created, a configuration entry like the one below will be created for it. For finer grained control, this can also be set to never, local or remote and can be set per repository or globally. See git config --help for further details.
+
+3. branch.<branchname>.rebase
+Setting this to true means that that particular branch will always pull from its upstream via rebasing, unless git pull --no-rebase is used explicitly.
+
+Conclusion
+So while you can't change the default behaviour for all future clones of a repository, you can change the default for all of the current user's (existing and future) repositories via git config --global pull.rebase true.
+
+

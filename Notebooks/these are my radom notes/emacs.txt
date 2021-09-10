@@ -1,0 +1,84 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-04-09T22:24:29-06:00
+
+====== emacs ======
+Created Friday 09 April 2021
+
+Please note that Emacs represents **'Ctrl'** as **'**C**'** and '**Alt'** as **'**m**'**. So, for example, whenever you see something like C-x, it means **Ctrl**+x.
+
+Like nano, you can directly open a file to edit in emacs in the following way:
+
+**emacs -nw [filename]**
+Note: The -nw flag makes sure emacs launches in bash itself, instead of a separate window which is the default behavior.
+
+For example:
+**emacs -nw test.txt**
+Important note: to end the Emacs session, type C-x C-c.  (Two characters.)
+To quit a partially entered command, type C-g.
+
+=== terms used and the = of ===
+kill = cut
+<del>or delete = backspace
+<M> meta = alt key
+//**to undo**// = **Ctrl+/**  works for kill or delete
+**Ctrl+g**... is a undo typed command
+after making changes, if you want to save them, use **Ctrl+x** followed by **Ctrl+s**. The last section will show you a message saying something on the lines of **'Wrote ........' .**
+
+Now, if you want to discard changes and quit the editor, use **Ctrl+x** followed by **Ctrl+c**. The editor will confirm this through a prompt
+
+As for other basic editing operations, deleting is simple, as it works through the **Backspace/Delete keys** that most of us are already used to. However, there are shortcuts that make your deleting experience smooth. For example, use **Ctrl+k** for deleting complete line, **Alt+d** for deleting a word, and **Alt+k** for a sentence.
+'''
+  You can delete by words or lines
+as well.  Here is a summary of the delete operations:
+
+	<DEL>        Delete the character just before the cursor
+	C-d   	     Delete the next character after the cursor
+
+	M-<DEL>      Kill the word immediately before the cursor
+	M-d	     Kill the next word after the cursor
+
+	C-k	     Kill from the cursor position to end of line
+	M-k	     Kill to the end of the current sentence
+'''
+
+
+to move to the bttm of screen and cont. **Ctrl+v**  to move back use **Alt+v**
+hitting **Ctrl+l** repeadly will move the line the curser is on from top middle and bottom of screen
+'''
+
+
+Here is a summary of simple cursor-moving operations, including the
+word and sentence moving commands:
+
+	C-f	Move forward a character
+	C-b	Move backward a character
+
+	M-f	Move forward a word
+	M-b	Move backward a word
+
+	C-n	Move to next line
+	C-p	Move to previous line
+
+	C-a	Move to beginning of line
+	C-e	Move to end of line
+
+	M-a	Move back to beginning of sentence
+	M-e	Move forward to end of sentence
+a number can be used to jump ahead or back using the c-u command first, 
+the number, then command
+
+  file     |    edit     |    buffers    |    tools     |    help
+
+<----------|-------------|---------------|--------------|------------->
+newfile    | undo        |  next buffer
+'''
+c-x c-f        c-x u          c-x <right>
+  quit
+c-x c-c 
+  save
+ c-x c-s
+  save as
+  c-x c-w
+remove other windows
+c-w c-o

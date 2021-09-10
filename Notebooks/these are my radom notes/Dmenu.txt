@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-06-13T22:57:25-06:00
+
+====== Dmenu ======
+Created Sunday 13 June 2021
+
+== commands for Distrotube's Dmenu ==
+
+== An example ==
+ **dmenu_run -c -bw 2 -l 20 -g 4 -p 'Run:'**
+This launches dmenu_run with -c (centered), -bw (border width), -l (number of vertical lines) and -g (number of grid columns).
+
+== arch example ==
+dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+
+== clip menu ==
+clipmenu -i -fn Terminus:size=8 -nb '#002b36' -nf '#839496' -sb '#073642' -sf '#93a1a1'
+
+== • Available flags ==
++ [-l lines]
++ [-g columns]
++ [-p prompt]
++ [-fn font]
++ [-m monitor]
++ [-h height]
++ [-nb color]
++ [-nf color]
++ [-sb color]
++ [-sf color]
++ [-nhb color]
++ [-nhf color]
++ [-shb color]
++ [-shf color]
++ [-w windowid]
++ [-c] for cente

@@ -1,0 +1,129 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-03-18T16:32:33-06:00
+
+====== terminal shortcuts ======
+Created Thursday 18 March 2021
+
+=== Searching History ===
+ ---we can view the history list--- 
+by doing the following
+$ **history | less**
+line number # of the commands in the history list. 
+We could use the number to run it
+$ **!<line#>**
+
+---**To start incremental search---**
+press **__Ctrl-r__** followed by the text we are looking for.
+ When we find it, we can either press __Enter__ to execute the com-
+mand or press **__Ctrl-j__** to copy the line from the history list to the current command line.
+
+== **script** ==
+In addition to the command history feature in bash, most Linux distributions in-
+clude a program called script that can be used to record an entire shell session
+and store it in a file. The basic syntax of the command is as follows-
+//**__script [file]__**//
+where file is the name of the file used for storing the recording. If no file is speci-
+fied, the file typescript is used. See the script man page for a complete
+list of the program’s options and features.
+
+==== zoom ====
+Zoom IN            :  Ctrl Shift +  
+Zoom Out           :  Ctrl - 
+Neutral ( 100% )   :  Ctrl ) or ctrl 0(zero)
+
+==== Terminal ====
+
+Ctrl+Shift+C - copy.
+Ctrl+Shift+V - paste
+Ctrl+a - jump to beginning of line.
+Ctrl+e - jump to end of line.
+Ctrl+w - delete a word backward.
+Ctrl+k - delete forward
+Ctrl+u - delete backward
+Ctrl+r - search previous command.
+Ctrl+c - terminate a running command.
+Ctrl+d - cancel. close terminal
+
+==== Advanced Keyboard Tricks ====
+Alt-l - Convert the characters from the cursor location to the end of the
+word to lowercase.
+Alt-u - Convert the characters from the cursor location to the end of the
+word to uppercase.
+Alt-f - Move cursor forward one word.
+Alt-b - Move cursor backward one word.
+Ctrl-l - Clear the screen and move the cursor to the top-left corner. The
+clear command does the same thing.
+
+==== Cut and Paste Commands ====
+Ctrl-k - Kill text from the cursor location to the end of line.
+Ctrl-u - Kill text from the cursor location to the beginning of the line.
+Alt-d -  Kill text from the cursor location to the end of the current word.
+Alt-
+Backspace - Kill text from the cursor location to the beginning of the current
+word. If the cursor is at the beginning of a word, kill the previous
+word.
+Ctrl-y - Yank text from the kill-ring and insert it at the cursor location.
+
+---
+
+==== list installed packages ====
+
+$ apt list --installed
+
+- Alternatively, the dpkg command will list installed packages, including version number, architecture and short package description:
+
+$ dpkg -l | grep ^ii
+
+==== List Installed Packages #2 ====
+
+$ dpkg --list <package_name>
+$ dpkg -l <package_name>
+$ dpkg --list bash
+$ dpkg --list
+Explanation:
+
+The --list option is used to show *all* of dpkg database contents sorted by package names.It shows all installed packages list, along with their statuses, versions, and descriptions information.
+
+==== Install Packages ====
+
+#dpkg --install <package_file_name>
+#dpkg -i <package_file_name>
+#dpkg --install wvdial_1.61-4.1_i386.deb
+#dpkg --install *
+Explanation:
+
+The --install option tells dpkg to install a package or some packages. The most convenient way to install package is by installing package belongs to the same directory with your console. First you should make sure your console belongs to the same directory with the package (use pwd and ls command to know), then you should type the correct name of package you want to install. Third command example and the output above show you how to do it.
+
+==== Remove Package ====
+
+#dpkg --remove <package_name>
+#dpkg -r <package_name>
+#dpkg --remove wvdial
+Explanation:
+
+The --remove option tells dpkg to remove one or some installed packages. To remove you can do it in any directory, but you should type the package_name instead of package_file_name. That's why third command example shows wvdial name instead of wvdial_1.61-4.1_i386.deb file name.
+
+==== Purge Package ====
+
+#dpkg --purge <package_name>
+#dpkg -purge <package_name>
+#dpkg --purge 
+Explanation:
+
+The --purge option tells dpkg to remove one or some packages. Purge is same with remove, but purge deletes also installed configuration files of the package. Notice the difference from output example while --purge shows "Purging configuration file for wvdial" message.
+
+==== Getting Help ====
+
+Internal:
+
+type command **man dpkg** to show dpkg manual documentation via Terminal.
+
+External:
+
+read dpkg manual documentation in some websites such as http://manpages.ubuntu.com/manpages/precise/en/man1/dpkg.1.html.
+
+### [[terminal commands]]	
+
+ 
+

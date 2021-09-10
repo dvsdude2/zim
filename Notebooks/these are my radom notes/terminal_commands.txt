@@ -1,0 +1,57 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-03-24T21:53:38-06:00
+
+====== terminal commands ======
+Created Wednesday 24 March 2021
+
+== print the output of a command to text file use ==
+
+[command](option) | tee log
+example= //**lsd --help | tee log**// 
+this will print the help file to a file called log
+
+== basic commands ==
+**pwd** - print working directory = print what file name your in
+**ls** - list files of the folder your in
+**ls <directory> **- will list files in that folder or (//files in that directory)//
+**ls -a **-list files + hidden files
+**ls -al **-list all files plus put them in a list format with extra info
+**ls -alh** - does all that plus use human numbers (k for 1000) (g for gigabyte)
+**ls -hal **- does the same so flag order not a big deal
+**cd **- change directories = move to a file
+**cd**+**<enter>** - takes you to home directory, (cd ~), (cd [[/home]])
+**cd - ** - will take you back one step, (cd ..)
+**ctrl+l **or **clear **- clear screen
+**man** = manual
+**man <command> **- the manual for that command and list of flags that can be used
+**mkdir **- make a directory or //folder// 
+**touch** - to make a file eg. //touch file1.txt// 
+*a better way is to open app with <file name>..... and it will make the file 
+**mv **- will move a file eg.( //mv file1.txt test)// - moves file1 to the test folder
+**cp** - copies a file //eg//(cp file1.txt test) copies file1 to test folder
+**rm** - removes file //eg//(rm test/file1.txt) folder first, then file(removes file1 from test folder)
+**rmdir** - to remove "empty" folder other wise you have to force it if there are files in it
+**rm -rf <directory>** - removes folder foceably with files in it
+**echo $PATH - **find your $path enviroment [the places the system looks for binarys]
+[[https://www.howtogeek.com/658904/how-to-add-a-directory-to-your-path-in-linux/|how-to-add-a-directory-to-your-path-in-linux/]]
+https://itsfoss.com/add-directory-to-path-linux/
+
+-makepkg            -use on pkgbuild to make it installable
+
+If you want to move/copy from .directory to the Desktop:
+mv /path/to/.directory/filename ~/Desktop
+cp /path/to/.directory/filename ~/Desktop
+
+Alternatively, if you want to move/copy from the Desktop into .directory:
+mv ~/Desktop/filename /path/to/.directory
+cp ~/Desktop/filename /path/to/.directory
+
+The difference between mv and cp is:
+
+mv will move a file (the file at origin gets destroyed).
+
+cp will copy a file (you get to keep the file at origin).
+
+
+

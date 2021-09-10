@@ -1,0 +1,43 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-04-15T22:09:26-06:00
+
+====== arco linux ======
+Created Thursday 15 April 2021
+
+
+
+
+==== window manager keyboard shortcuts .......(keybindings) ====
+Here we just want to update and get on with our work.
+
+You can use these commands as you see fit.
+We have added the frequency behind it as indication. Again you are free to do it differently.
+
+**update** – ArcoLinux packages, third-party packages build for ArcoLinux and Arch Linux packages  – //DAILY//
+
+**upall** – updating all AUR packages – any package you installed additionally – //DAILY//
+
+**skel** – copy/pasting /etc/skel content to your home directory and making a backup of .config folder – //MONTHLY//
+
+**cb** – copy/pasting content from /etc/skel/.bashrc to ~/.bashrc + making it work (source) – //MONTHLY//
+
+For Arch Linux users
+
+== update ==
+alias update='sudo pacman -Syyu'
+
+== skel ==
+alias skel='cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/skel/* ~'
+
+== cb ==
+alias cb='sudo cp /etc/skel/.bashrc ~/.bashrc && source ~/.bashrc'
+
+== upall ==
+alias upall='paru -Syu --noconfirm'
+
+== key bindings ==
+popup appmenu      = alt+F1/collapsed=alt+F2
+appfinder                 = alt+ctrl+A or  alt+F3
+move window to ws = alt+ctrl+#keys
+move focus to ws     = alt+ctrl+arrwkeys / or ctrl+F?

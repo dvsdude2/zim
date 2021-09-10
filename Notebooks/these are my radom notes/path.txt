@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-07-05T14:32:28-06:00
+
+====== path ======
+Created Monday 05 July 2021
+
+== Adding a directory to PATH in Linux ==
+The process to add a new directory to the PATH variable in Linux is essentially this:
+**export PATH=$PATH:your_directory**
+Where your_directory is the absolute path to the concerned directory.
+
+Let’s say, you download and extracted Maven to the home directory and you want to add its bin directory to the PATH. Let’s assume that the absolute path of this bin directory is /home/abhishek/maven/apache-maven-3.8.0/bin.
+
+Here’s what you should be doing:
+
+export PATH=$PATH:/home/abhishek/maven/apache-maven-3.8.0/bin
+`code`
+`**export PATH=$PATH:/home/abhishek/maven/apache-maven-3.8.0/bin`**
+
+=== Things to pay attention here ===
+--------------------
+The $ before a variable name means you are referring to its value. PATH is the variable name, $PATH is the value of variable PATH.
+You should not use $ with PATH on the left side of =
+There must not be any spaces before and after =
+Don’t forget to include the : after $PATH because the directories in the PATH are separated by colon.
+There must not be a space before and after the colon (:).
+Once you have set the PATH with the new value, please check that the PATH has been correctly updated.
+`code`
+abhishek@its-foss:~$ echo $PATH
+[[/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/abhishek/maven/apache-maven-3.8.0/bin]]
+
+You may want to run the command or script for which you modified the PATH. This will tell you for sure if the PATH is correctly set now.

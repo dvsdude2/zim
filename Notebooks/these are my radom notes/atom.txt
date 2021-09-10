@@ -1,0 +1,84 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-06-05T01:55:02-06:00
+
+====== atom ======
+Created Saturday 05 June 2021
+
+You can run the **atom** command with one or more file paths to open up those files in Atom.
+
+Ctrl+S to save the file.
+
+In addition to single character movement, there are a number of other movement keybindings:
+
+Move to the beginning of word        - **Ctrl+Left** 
+Move to the end of word              - **Ctrl+Right** 
+Move to first character of line      - **Home** 
+Move to the end of the line          - **End** 
+Move to the top of the file          - **Ctrl+Home** 
+Move to the bottom of the file       - **Ctrl+End** 
+
+===== tabs and splittes =====
+switch focus/tab                      -**ctrl+k then ctrl direction arrows**
+split tab                             - ctrl+k then direction arrows
+close a pane                          - ctrl+w
+
+===== Selections =====
+'''
+
+mirror many of the movement commands. They're actually exactly the same keybindings as the movement commands, but with a Shift key added in.
+'''
+
+Select up                            - **Shift+Up**               
+Select down                          - **Shift+Down** 
+Select previous character            - **Shift+Left**             
+Select next character        	     - **Shift+Right**            
+Select to beginning of word          - **Ctrl+Shift+Left**      
+Select to end of word                - **Ctrl+Shift+Right**    
+Select to end of line                - **Shift+End**                
+Select to first character of line    - **Shift+Home**            
+Select to top of file                - **Ctrl+Shift+Home**    
+Select to bottom of file             - **Ctrl+Shift+End**
+        
+In addition to the cursor movement selection commands, there are also a few commands that help with selecting specific areas of content.
+
+Select the entire contents of file    - **Ctrl+A** 
+Select the entire line                - **Ctrl+L** 
+
+===== Basic Manipulation =====
+There are a handful of cool keybindings for basic text manipulation that might come in handy. These range from moving around lines of text and duplicating lines to changing the case.
+
+Join line to end of the current line    - Ctrl+J       
+Move the current line up or down        - Ctrl+Up/Down 
+Duplicate the current line              - Ctrl+Shift+D 
+
+===== Deleting and Cutting =====
+You can also delete or cut text out of your buffer with some shortcuts. Be ruthless.
+
+Delete current line                       - Ctrl+Shift+K   
+Delete to beginning of word               - Ctrl+Backspace 
+Delete to end of word                     - Ctrl+Delete    
+
+===== Multiple Cursors and Selections =====
+One of the cool things that Atom can do out of the box is support multiple cursors. This can be incredibly helpful in manipulating long lists of text.
+
+Add a new cursor at the clicked location       - Ctrl+Click        
+Add another cursor above/below cursor          - Alt+Shift+Up/Down 
+Select next word that is same as selected      - Ctrl+D            
+Select all words that are same as selected     - Alt+F3            
+
+Using these commands you can place cursors in multiple places in your document and effectively execute the same commands in multiple places at once.
+
+===== Find and Replace =====
+Finding and replacing text in your file or project is quick and easy in Atom.
+
+Search within a buffer                         - Ctrl+F       
+Search the entire project                      - Ctrl+Shift+F 
+
+If you launch either of those commands, you'll be greeted with the Find and Replace panel at the bottom of your screen.
+
+
+
+'.workspace .editor':
+  'cmd-delete': 'unset!'
+  'cmd-delete': 'editor:delete-line'

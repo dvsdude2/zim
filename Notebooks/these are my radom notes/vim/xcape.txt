@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-08-30T00:51:42-06:00
+
+====== xcape ======
+Created Monday 30 August 2021
+
+xcape -e 'Shift_L=Escape;Control_L=Control_L|O'

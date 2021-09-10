@@ -1,0 +1,139 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-04-09T22:11:43-06:00
+
+====== vim ======
+Created Friday 09 April 2021
+
+== LEADER KEY = < / > ==
+
+== move lines that are hilighted.... ==
+using v to select lines 
+
+== **__<shift>+j or k to move lines up and down__** ==
+
+lines to add to vimrc to make it work
+	xnoremap K :move '<-2<CR>gv-gv
+	xnoremap J :move '>+1<CR>gv-gv
+
+
+===== to exit =====
+quit with out writing............:q! or <shift>ZQ            
+write the file before quiting....:wq` or <shift>ZZ        
+
+to open a new file...............:e **<filename.ext>** 
+toggle between buffers............CTRL+^
+open a window below current.......**:new <filename.ext>**
+open a window beside current......**:vert new <filename.ext>**
+
+== method #2 ==
+open a new tab from your terminal session and launch vi from there.
+You can usually open a new tab from terminal with CTRL+T or CTRL+ALT+T
+
+To change between windows..............**crtl+ww**
+
+==== The Basics of Vim ====
+
+Command	Description
+Move one word forward/backward.............w and b	       
+Move to end of word........................e	                
+Move to first/last line in current file....gg and G	
+Move to a specific line....................#+G	               
+Move beginning of current line.............0	                
+Move to first/last character...............^ and $	
+Combine numbers with motions:
+10j - move 10 lines down
+4w - move 4 words forward
+
+
+==== Normal Mode - Verbs ====
+Verbs much (usually) be mixed with motions (nouns)
+
+Command	Description
+x	        Delete one character forward (no motion required)
+dw	        Delete one word forward (include whitespace)
+de	        Delete to end of word (don't include whitespace)
+d$	        Delete from current cursor position to end of line
+dd	        Delete entire line
+d#w	Delete # words forward (replace # with number of words you want to delete)
+
+For the above commands starting with '**d**', change '**d**' to:
+**c      ** to change instead of delete (same as delete but puts you in Insert Mode after)
+**y**        to yank instead of delete (copies whatever you yank; e.g. yw copies next word) 
+ **u    ** to undo last command (this is really helpful!)
+
+ **R    ** to redo last undo (this is really helpful!)
+
+
+==== Insert Mode ====
+Text editing as normal
+
+//**exit Insert Mode....**//ESC key or CTRL+[       
+
+Command	Description
+i//**	Enter insert mode**// at current cursor position
+I	Enter insert mode just before first character of line
+a	Enter insert mode just after current cursor position
+A	Enter insert mode just after last character in line
+o	Enter isnert mode while adding a new line below current cursor position
+O	Enter isnert mode while adding a new line above current cursor position
+
+
+==== Visual Mode ====
+Command	Description
+v	                Enter visual mode. All motions will now move the highlight.
+V	                Enter visual mode. Highlights entire lines.
+CTRL+v	Enter visual mode, highlighting lines vertically (useful for selecting multiple linlines and executing the same Insert Command on all).
+All motions still work - w to jump words, $ to jump to end of line, etc.
+
+All verbs still work - highlight text, press d to delete, c to change, etc.
+   
+
+===== Vim search and replace =====
+Search and Replace(the whole file)
+To perform basic search and replace using the substitute command, use the following syntax:
+
+//**:%s/<search_term>/<replace_term>/g**//
+
+__-to Search and Replace in a single line__ leave out the "//**%"**//
+
+Follow the below simple steps to search and replace any word in Vim editor
+
+- Open the file in Vim
+- Press slash (/) key along with the search term like “/ search_term” and press Enter. It will highlight the selected word.
+- Then hit the keystroke //**cgn**// to replace the highlighted word and enter the replace_term
+- Go back to normal mode. Next, hit “n” to move to the next occurrence of the search term.
+- Then press the dot (.) if you want to replace the next occurrence with the same replace_term otherwise again press the “n” key to move to the next occurrence.
+
+
+More Resources
+Here are a few tutorials and resources I recommend when learning bash/Vim
+
+
+
+//**vimtutor**//    ...(type this command on your terminal, and it will bring you to a pretty great interactive walkthrough of Vim on the terminal)
+[[https://scotch.io/tutorials/getting-started-with-vim-an-interactive-guide|Step-by-Step Guide on Starting with Vim]] (includes tips for getting started on different OS versions)
+[[http://www.openvim.com/|Interactive Online Vim Tutorial]]
+Vim Adventures (a cute game to learn Vim, which I found pretty helpful in the first few days)
+[[https://vimawesome.com/|Really neat Vim Plugins]] (I use a few for autocomplete in the different web programming languages we use [[[https://vimawesome.com/plugin/emmet-vim|this is a favorite]], here's a [[https://courses.cs.washington.edu/courses/cse154/17au/exploration/vim/demo.ogg|demo]] of me using it to create an HTML page with a table in ~10 seconds] as well as navigation through my directories while in Vim)
+Vim Cheatsheets
+
+[[https://vim.rtorr.com/|Vim Cheatsheet]] (the best I've found)
+
+
+==== More Resources (Continued) ====
+Bash/Command Line Tutorials
+
+[[http://linuxcommand.org/lc3_lts0010.php|Learning the Shell]]
+[[https://programminghistorian.org/lessons/intro-to-bash#introduction-to-the-bash-command-line|Introduction to the Command Line (good walkthrough with tips for each OS]]
+[[https://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything|"Use the Command Line for Almost Anything" Guide]]
+Bash/Command Line Cheatsheets
+
+[[https://www.git-tower.com/blog/posts/command-line-cheat-sheet|Command Line Cheatsheet]]
+
+[[https://courses.cs.washington.edu/courses/cse154/17au/exploration/vim/code/.bashrc|.bashrc]] and [[https://courses.cs.washington.edu/courses/cse154/17au/exploration/vim/code/.vimrc|.vimrc]] files made for you!
+
+These have various syntax-highlighting features, auto-indent features, aliases for running a php server or mysql, etc. You can continue to customize your own with new bashrc/vimrc options you [[http://learnvimscriptthehardway.stevelosh.com/chapters/07.html|find online]]!
+Save both .bashrc and .vimrc to the ~/ directory from the terminal
+You'll then need to run **source ~/.bashrc** and **source ~/.vimrc** to update them or close/reopen a terminal to see the changes.
+i left this text here using vim

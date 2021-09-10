@@ -1,0 +1,56 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-05-07T23:00:21-06:00
+
+====== ytsytfzf ======
+Created Friday 07 May 2021
+
+Examples
+Search with Thumbnails
+
+Find and watch videos with thumbnail previews
+
+ytfzf -t <query>
+Show all subscriptions with thumbnails (latest 10)
+
+ytfzf -St
+You can use multiple options together, here are some examples
+
+Stream audio (music), and prompt as the music finishes
+
+ytfzf -ml <query>
+Download a video from your history
+
+ytfzf -dH
+Open using external menu in a certain format
+
+ytfzf -fD
+If you started watching a video and you wish to change format then first hit Q to save position and quit mpv, then choose your format using
+
+ytfzf -faH
+
+Usage: ytfzf [OPTIONS...] <search-query>;
+  OPTIONS:
+	 -h, --help                                            Show this help text;
+	 -v, --version                                       -v for ytfzf's version;
+	 -t, --show-thumbnails                       Show thumbnails (requires ueberzug)
+	 -N, --notification                                Send notification when playing video
+	 -D, --ext-menu                                    Use external menu (default dmenu) instead of fzf
+	 -H, --choose-from-history                 Choose from history
+	 -x, --clear-history                                Delete history
+	 -m, --audio-only     <search-query>    Audio only (for music)
+	 -d, --download       <search-query>    Download to current directory
+	 -f                              <search-query>    Show available formats before proceeding
+	 -a, --auto-select      <search-query>    Auto play the first result, no selector
+	 -r  --random-select  <search-query>    Auto play a random result, no selector
+	 -A, --select-all          <search-query>    Selects all results
+	 -n, --link-count=      <link-count>      To specify number of videos to select with -a, -r
+	 -l, --loop                  <search-query>    Loop: prompt selector again after video ends
+	 -s, --search-again   <search-query>    After the video ends make another search
+	 -L, --link-only          <search-query>    Prints the selected URL only, helpful for scripting
+	 -T, --trending=        <gaming/music/movies>      The trending tab, using --trending= you can choose a specific tab
+	 --preview-side=      <left/right/top/bottom>    The side of the screen to show thumbnails
+	 --subt                                 Select auto-generated subtitles
+	 --sort                                 Sorts videos by latest upload date
+
+

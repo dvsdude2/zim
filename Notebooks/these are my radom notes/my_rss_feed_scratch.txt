@@ -1,0 +1,38 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-03-18T20:50:56-06:00
+
+====== my rss feed scratch ======
+Created Thursday 18 March 2021
+
+===== check github/rss-bridge/rss-bridge =====
+
+== making rss freeds from youtube ==
+replace CHANNEL_ID with the id from youtube profile
+
+https://www.youtube.com/feeds/videos.xml?channel_id=CHANNEL_ID
+eg.
+distotube = 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg
+
+== making rss feed from lbry ==
+lbryfeed.melroy.org/channel/tv/eevblog
+change the eevblog part with name of channel
+* http://lbryfeed.melroy.org/channel/@DistroTube
+* https://lbryfeed.melroy.org/channel/corbettreport
+
+
+== make rss feed for twitter ==
+use web site nitter.net and grab rss feed from there
+
+== for reddit ==
+simply add .rss to any page or subreddit
+
+== for google news ==
+
+https://news.google.com/news/rss/?gl=US&ned=us&hl=en
+
+Suppose you want to access Google News Top stories content for United States and English Language. Then, In the above link all you have change is ?gl=IN to ?gl=US and &ned=in to &ned=us. This way you change the region. Now, For changing the language to english you have change hl=en which is already present there, therefore, no need to change.
+
+accessing google feeds check out this page https://techchahiye.com/how-access-google-news-rss-feed/
+

@@ -1,0 +1,91 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-07-06T09:12:07-06:00
+
+====== nerdtree ======
+Created Tuesday 06 July 2021
+
+== nerdtree ==
+--------------------
+
+## Getting Started
+
+After installing NERDTree, the best way to learn it is to turn on the Quick Help. Open NERDTree with the `:NERDTree` command, and press `?` to turn on the Quick Help, which will show you all the mappings and commands available in the NERDTree. Of course, your most complete source of information is the documentation: `:help NERDTree`.
+
+NERDTree doesn't create any shortcuts outside of the NERDTree window, so as not to overwrite any of your other shortcuts. Use the `nnoremap` command in your `vimrc`. You, of course, have many keys and NERDTree commands to choose from. Here are but a few examples.
+
+```vim
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+```
+```suggested for splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+```
+enter **tabnew **
+to open empty page
+then use ctrl+pageup/or pagedown to switch between
+
+### 
+
+
+## NERDTree Plugins
+
+NERDTree can be extended with custom mappings and functions using its built-in API. The details of this API and are described in the included documentation. Several plugins have been written, and are available on Github for installation like any other plugin. The plugins in this list are maintained (or not) by their respective owners, and certain combinations may be incompatible.
+
+* [Xuyuanp/nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin): Shows Git status flags for files and folders in NERDTree.
+* [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons): Adds filetype-specific icons to NERDTree files and folders,
+* [tiagofumo/vim-nerdtree-syntax-highlight](https://github.com/tiagofumo/vim-nerdtree-syntax-highlight): Adds syntax highlighting to NERDTree based on filetype.
+* [scrooloose/nerdtree-project-plugin](https://github.com/scrooloose/nerdtree-project-plugin): Saves and restores the state of the NERDTree between sessions.
+* [PhilRunninger/nerdtree-buffer-ops](https://github.com/PhilRunninger/nerdtree-buffer-ops): 1) Highlights open files in a different color. 2) Closes a buffer directly from NERDTree.
+* [PhilRunninger/nerdtree-visual-selection](https://github.com/PhilRunninger/nerdtree-visual-selection): Enables NERDTree to open, delete, move, or copy multiple Visually-selected files at once.
+
+# NERDTree
+	o.......Open files, directories and bookmarks....................|NERDTree-o|
+	go......Open selected file, but leave cursor in the NERDTree.....|NERDTree-go|
+	t.......Open selected node/bookmark in a new tab.................|NERDTree-t|
+	T.......Same as 't' but keep the focus on the current tab........|NERDTree-T|
+	i.......Open selected file in a split window.....................|NERDTree-i|
+	gi......Same as i, but leave the cursor on the NERDTree..........|NERDTree-gi|
+	s.......Open selected file in a new vsplit.......................|NERDTree-s|
+	gs......Same as s, but leave the cursor on the NERDTree..........|NERDTree-gs|
+	O.......Recursively open the selected directory..................|NERDTree-O|
+	x.......Close the current nodes parent...........................|NERDTree-x|
+	X.......Recursively close all children of the current node.......|NERDTree-X|
+	e.......Edit the current dif.....................................|NERDTree-e|
+
+	<CR>...............same as |NERDTree-o|.
+	double-click.......same as the |NERDTree-o| map.
+	middle-click.......same as |NERDTree-i| for files, same as
+					  |NERDTree-e| for dirs.
+
+	D.......Delete the current bookmark .............................|NERDTree-D|
+
+	P.......Jump to the root node....................................|NERDTree-P|
+	p.......Jump to current nodes parent.............................|NERDTree-p|
+	K.......Jump up inside directories at the current tree depth.....|NERDTree-K|
+	J.......Jump down inside directories at the current tree depth...|NERDTree-J|
+	<C-J>...Jump down to the next sibling of the current directory...|NERDTree-C-J|
+	<C-K>...Jump up to the previous sibling of the current directory.|NERDTree-C-K|
+
+	C.......Change the tree root to the selected dir.................|NERDTree-C|
+	u.......Move the tree root up one directory......................|NERDTree-u|
+	U.......Same as 'u' except the old root node is left open........|NERDTree-U|
+	r.......Recursively refresh the current directory................|NERDTree-r|
+	R.......Recursively refresh the current root.....................|NERDTree-R|
+	m.......Display the NERD tree menu...............................|NERDTree-m|
+	cd......Change the CWD to the dir of the selected node...........|NERDTree-cd|
+
+	I.......Toggle whether hidden files displayed....................|NERDTree-I|
+	f.......Toggle whether the file filters are used.................|NERDTree-f|
+	F.......Toggle whether files are displayed.......................|NERDTree-F|
+	B.......Toggle whether the bookmark table is displayed...........|NERDTree-B|
+
+	q.......Close the NERDTree window................................|NERDTree-q|
+	A.......Zoom (maximize/minimize) the NERDTree window.............|NERDTree-A|
+	?.......Toggle the display of the quick help.....................|NERDTree-?|
+

@@ -1,0 +1,49 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-04-15T12:24:22-06:00
+
+====== cpu fetch ======
+Created Thursday 15 April 2021
+
+The tool outputs the ASCII art of the processor manufacturer, its name, microarchitecture, frequency, cores, threads, peak performance, cache sizes, Advanced Vector Extensions, and more.
+
+You can use custom colors apart from a few themes it provides. This gives you additional degree of freedom when you are ricing your desktop and want to color match all the elements on your Linux setup.
+
+Installing CPUFetch on Linux
+Unfortunately, CPUFetch is rather new, and it is not included in your distribution’s repository. It doesn’t even provide ready to use DEB/RPM binaries, PPAs, Snap or Flatpak packages.
+
+Arch Linux users can find it in AUR but for others, the only way forward here is to build from source code.
+
+Don’t worry. Installation as well as removal is not that complicated. Let me show you the steps.
+
+I am using Ubuntu and you would need to install Git on Ubuntu first. Some other distributions come preinstalled with it, if not use your distribution’s package manager to install it.
+
+Now, clone the Git repository wherever you want. Home directory is fine as well.
+
+=== //git clone https://github.com/Dr-Noob/cpufetch// ===
+
+Switch to the directory you just cloned:
+
+== cd cpufetch ==
+
+You’ll see a make file here. Use it to compile the code.
+
+== make ==
+
+Now you’ll see a new executable file named cpufetch. You run this executable to display the CPU information in the terminal.
+
+== ./cpufetch ==
+
+
+cpufetch showing CPU information in Linux terminal for itsfoss
+
+
+
+How do you remove Cpufetch? It’s pretty simple. When you compiled the code, it produced just one file and that too in the same directory as the rest of the code.
+
+So, to remove CPUFetch from your system, simply remove its entire folder. You know how to remove a directory in Linux terminal, don’t you? Come out of the cpufetch directory and use the rm command:
+
+== rm -rf cpufetch ==
+
+That was simple, thankfully because removing software installed from source code could be really tricky at times.
+
